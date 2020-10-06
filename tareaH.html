@@ -1,0 +1,31 @@
+<html>
+  <head>
+      
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    
+  </head>
+  <body> 
+    <a-scene>
+      <a-assets>
+        <img id="t" src="assets/textures/re.jpg" >
+        <img id="sky" src="assets/textures/sky.png">
+      </a-assets>
+     
+      <a-scene>
+        
+      <a-entity geometry ="primitive: plane; height:8; width:8; "
+      rotation ="-90 0 0"
+      position="0 0 0"
+      material ="src:1.jpg; roughness: 0.5; metalness: 0;repeat:2 2;"></a-entity>
+      <a-entity light="type: directional; color: red; intensity: 1.5" position="0.4 0.2 -0.2"></a-entity>
+      <a-entity light="type: directional; color: blue; intensity: 1.5" position="-0.4 0.2 -0.2"></a-entity>
+      <a-dodecahedron material="src:#t; repeat:3 3 " radius="1" position="0 1 -1.8"></a-dodecahedron>
+      <a-sky src="#sky"></a-sky>
+      <a-entity light="type: ambient; color: blue; intensity:0"></a-entity>
+
+    </a-scene>
+      
+    </a-scene>
+
+  </body>
+</html>
